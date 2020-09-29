@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs'); -%>
+<body>
+  <div class="container">
+    <div class="m-3"><h1>Editar</h1></div>
+    <form action="/entry<%=entrada._id%>?_method=PATCH" method="post">
+      <div class="form-group">
+        <label for="titulo">Titulo</label>
+        <input
+          name="titulo"
+          type="text"
+          value="<%= entrada.titulo %>"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="conteudo">Conteúdo</label>
+        <textarea class="form-control" name="conteudo" required>
+<%= entrada.conteudo %></textarea
+        >
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+
+        <a href="/" class="btn btn-secondary">Índice</a>
+      </div>
+    </form>
+
+    <%- include('partials/footer.ejs'); %>
+  </div>
+</body>

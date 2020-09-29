@@ -1,0 +1,29 @@
+<%- include('partials/header.ejs'); -%>
+<body>
+  <div class="container">
+    <div class="card p-4 mt-4 mb-4">
+      <h3 class="card-subtitulo text-muted mb-4">
+        <%=entrada.criadaEm.toLocaleDateString()%>
+      </h3>
+      <h1 class="card-titulo mb-4"><%=entrada.titulo%></h1>
+
+      <p class="card-text"><%= entrada.conteudo%></p>
+    </div>
+
+    <div class="form-group btn-group" role="group">
+      <div>
+        <a href="/edit<%= entrada._id%>" class="btn btn-primary m-2">Editar</a>
+      </div>
+
+      <div>
+        <a href="/" class="btn btn-secondary m-2">Índice</a>
+      </div>
+
+      <form action="/entry<%= entrada._id%>?_method=DELETE" method="post">
+        <button class="btn btn-secondary m-2" type="submit">Deletar</button>
+      </form>
+    </div>
+
+    <%- include('partials/footer.ejs'); %>
+  </div>
+</body>

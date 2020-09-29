@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Courier+Prime&family=Gochi+Hand&family=Oswald:wght@200&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+#jumboTitle {
+  font-family: 'Indie Flower', cursive;
+}
+
+.jumbotron {
+  /* background-color: #87aca3; */
+  /* background-color: #175873; */
+  background-color: #ffffff;
+}
+
+#titleSpan {
+  font-family: 'Vidaloka', serif;
+  /* font-style: italic; */
+  color: #b3504b;
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: small;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.btn.btn-primary {
+  background-color: brown;
+}
