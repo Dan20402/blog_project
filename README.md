@@ -1,3 +1,3 @@
 # blog_project
 
-Projeto de blog utilizando nodejs e MongoDB Atlas
+Projeto de blog utilizando ejs templates, nodejs e MongoDB Atlas
