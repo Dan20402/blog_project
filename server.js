@@ -7,6 +7,8 @@ const methodOverride = require('method-override');
 const ejs = require('ejs');
 const app = express();
 
+require('dotenv').config();
+
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
@@ -14,13 +16,12 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
-mongoose.connect(
-  'mongodb+srv://admin:test123@cluster0.yv2af.mongodb.net/testeDB?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+const connectToDB = process.env.CONNECTION_STRING;
+
+mongoose.connect(connectToDB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app.get('/compose', (req, res) => {
   res.render('compose');
